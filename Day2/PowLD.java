@@ -18,8 +18,11 @@ public class PowLD {
                 LastB = 4;
             }
 
-            int result = (int)Math.pow(LastA, LastB);
-            System.out.println("Last digit is " + (result%10));
+            int result = 1;
+            for (int i = 0; i < LastB; i++) {
+                result = (result * LastA)%10;
+            }
+            System.out.println("Last digit is " + result);
         }
     }
 }
@@ -35,7 +38,7 @@ public class PowLD {
  * 3. Compute lastB = b % 4 since last digits repeat every 4 powers.
  * 4. If lastB == 0, set lastB = 4.
  * 5. Compute result = lastA ^ lastB.
- * 6. Print result % 10 as the last digit.
+ * 6. Print result as the last digit.
  * 
  * Output:
  * - The last digit of a^b
