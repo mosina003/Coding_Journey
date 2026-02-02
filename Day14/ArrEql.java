@@ -1,4 +1,4 @@
-
+package Day14;
 import java.util.*;
 
 public class ArrEql {
