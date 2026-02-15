@@ -1,4 +1,27 @@
-//You are given an array arr[] containing positive integers. The elements in the array arr[] range from  1 to n (where n is the size of the array), and some numbers may be repeated or absent. Your have to count the frequency of all numbers in the range 1 to n and return an array of size n such that result[i] represents the frequency of the number i (1-based indexing).
-public class FreqCount {
-    
+package Day19;
+import java.util.*;
+
+public class TwoSum {
+  public static boolean sum(int m,int[] arr,int target){
+    HashSet<Integer> set=new HashSet<>();
+    for(int n: arr){
+      int req=target-n;
+      if(set.contains(req)){
+        return true;
+      }
+      set.add(n);
+    }
+    return false;
+  }
+    public static void main(String[] args) {
+      Scanner z=new Scanner(System.in);
+      int m=z.nextInt();
+      int[] arr=new int[m];
+      for(int i=0;i<m;i++){
+        arr[i]=z.nextInt();
+      }
+      int target=z.nextInt();
+      
+      System.out.println(sum(m,arr,target));
+    }
 }
