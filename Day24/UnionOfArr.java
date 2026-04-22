@@ -1,3 +1,4 @@
+package Day24;
 //Stream API usage
 //the Stream API provides a concise way to filter duplicates using the distinct() method.  
 import java.util.*;
